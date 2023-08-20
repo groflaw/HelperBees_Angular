@@ -14,6 +14,13 @@ const routes: Routes = [
     loadChildren: () =>
       import('./pages/pricing/pricing.module').then((m) => m.PricingModule),
   },
+  {
+    path: 'myaccount',
+    loadChildren: () =>
+      import('./pages/myaccount/myaccount.module').then(
+        (m) => m.MyaccountModule
+      ),
+  },
   { path: '', redirectTo: '/assessment/intro', pathMatch: 'full' },
 ];
 
